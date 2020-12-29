@@ -1,8 +1,12 @@
+import { useEffect, useState } from 'react'
+import ScreenSizeLayout from '../components/layouts/ScreenSizeLayout'
 
-const Index = ({ server, measures, screen }) => {
+
+const Index = ({ server, size, screen }) => {
   
-  const width = measures && measures[0] + 'px'
-  const heigh = measures && measures[1] + 'px'
+  const width = size + 'px'
+
+  const btnWidth = size / 2
 
   return (
     <div className='row'>
@@ -22,10 +26,10 @@ const Index = ({ server, measures, screen }) => {
           <hr/>
         </div>
         <div className="col-md-6 col-lg-3">
-          {(measures && measures[0]>240) && (
+          {size>240 && (
             <>
-              <h2>SCREEN HEIGH SIZE</h2>
-              <h5 style={{color:'red'}}>{`${heigh}px`}</h5>
+              <h2>BUTTON WIDTH</h2>
+              <h5 style={{color:'red'}}>{`${btnWidth}px`}</h5>
               <button className='btn btn-danger mt-2'>BUTTON</button>
             </>
           )}

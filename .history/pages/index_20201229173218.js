@@ -1,3 +1,6 @@
+import { useEffect, useState } from 'react'
+import ScreenSizeLayout from '../components/smart/ScreenSizeLayout'
+
 
 const Index = ({ server, measures, screen }) => {
   

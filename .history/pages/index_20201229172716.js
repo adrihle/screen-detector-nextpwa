@@ -1,8 +1,11 @@
+import { useEffect, useState } from 'react'
+import ScreenSizeLayout from '../components/layouts/ScreenSizeLayout'
+
 
 const Index = ({ server, measures, screen }) => {
   
-  const width = measures && measures[0] + 'px'
-  const heigh = measures && measures[1] + 'px'
+  const width = measures[0] + 'px'
+  const heigh = measures[1] + 'px'
 
   return (
     <div className='row'>
@@ -22,7 +25,7 @@ const Index = ({ server, measures, screen }) => {
           <hr/>
         </div>
         <div className="col-md-6 col-lg-3">
-          {(measures && measures[0]>240) && (
+          {size>240 && (
             <>
               <h2>SCREEN HEIGH SIZE</h2>
               <h5 style={{color:'red'}}>{`${heigh}px`}</h5>

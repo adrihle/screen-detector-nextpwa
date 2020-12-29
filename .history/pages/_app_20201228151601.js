@@ -2,7 +2,7 @@ import App, { Container } from "next/app";
 import Head from "next/head";
 import styled, { createGlobalStyle } from "styled-components";
 import { title } from "./_document";
-import ScreenSizeLayout from '../components/smart/ScreenSizeLayout'
+import ScreenSizeLayout from '../components/layouts/ScreenSizeLayout'
 
 // Any global CSS variables and selectors we want
 const GlobalStyle = createGlobalStyle`

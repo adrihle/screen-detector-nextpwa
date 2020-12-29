@@ -1,8 +1,8 @@
 import App, { Container } from "next/app";
 import Head from "next/head";
 import styled, { createGlobalStyle } from "styled-components";
+import Nav from "../components/Nav";
 import { title } from "./_document";
-import ScreenSizeLayout from '../components/smart/ScreenSizeLayout'
 
 // Any global CSS variables and selectors we want
 const GlobalStyle = createGlobalStyle`
@@ -42,15 +42,11 @@ export default class MyApp extends App {
       <>
         <Head>
           <title>{title}</title>
-          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></link>
         </Head>
         <Container>
-          {/* here a style layout */}
+          <Nav />
           <Main>
-            {/* here a smart screen detector */}
-            <ScreenSizeLayout>
-              <Component {...pageProps} router={router} />
-            </ScreenSizeLayout>
+            <Component {...pageProps} router={router} />
           </Main>
           <GlobalStyle />
         </Container>
