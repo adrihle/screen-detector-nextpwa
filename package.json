@@ -25,6 +25,7 @@
     "next-offline": "^4.0.2",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
+    "react-burger-menu": "^3.0.2",
     "react-dom": "^16.8.6",
     "styled-components": "^4.3.2"
   },

@@ -7,7 +7,7 @@ const Index = ({ server, measures, screen }) => {
   
 
   return (
-    <div  className='container p-3'>
+    <div  id='container'>
       <div className='row' id='content'>
         <div className="col-md-6 col-lg-3">
           <h2>SSL Detector</h2>
@@ -24,11 +24,11 @@ const Index = ({ server, measures, screen }) => {
           <h5 style={{color:'red'}}>{width}</h5>
           <hr/>
         </div>
-        <div className="col-sm-1 col-md-6 col-lg-3">
+        <div className="col-md-6 col-lg-3">
           {(measures && measures[0]>240) && (
             <>
               <h2>SCREEN HEIGH SIZE</h2>
-              <h5 style={{color:'red'}}>{`${heigh}`}</h5>
+              <h5 style={{color:'red'}}>{`${heigh}px`}</h5>
               <button className='btn btn-danger mt-2'>BUTTON</button>
             </>
           )}

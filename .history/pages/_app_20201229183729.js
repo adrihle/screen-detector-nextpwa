@@ -49,7 +49,7 @@ export default class MyApp extends App {
             {/* here a smart screen detector */}
             <ScreenSizeLayout>
               <Menu />
-              <Component {...pageProps} router={router} />
+                <Component {...pageProps} router={router} />
             </ScreenSizeLayout>
           <GlobalStyle />
         </Container>

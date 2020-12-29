@@ -10,12 +10,10 @@ const ScreenSizeLayout = ({ children }) => {
         let heigh = window.innerHeight
         setMeasures([width, heigh])
 
-        let landscape = width > heigh
-
         if (width < 420){setScreen('Mobile')}
-        else if (width > 420 && width < 850 && landscape){setScreen('Land Mobile')}
-        else if (width > 420 && width < 1300 && !landscape){setScreen('Tablet')}
-        else if (width > 820 && width < 1400 && landscape){setScreen('Land Tablet')}
+        else if (width > 770 && width < 850 && heigh < 420){setScreen('Land Mobile')}
+        else if (width > 770 && width < 850 && heigh > 420){setScreen('Tablet')}
+        else if (width > 820 && width < 1300){setScreen('Land Tablet')}
         else {setScreen('Desktop')}
     }
 

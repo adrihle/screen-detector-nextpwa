@@ -28,7 +28,7 @@ const Index = ({ server, measures, screen }) => {
           {(measures && measures[0]>240) && (
             <>
               <h2>SCREEN HEIGH SIZE</h2>
-              <h5 style={{color:'red'}}>{`${heigh}`}</h5>
+              <h5 style={{color:'red'}}>{`${heigh}px`}</h5>
               <button className='btn btn-danger mt-2'>BUTTON</button>
             </>
           )}

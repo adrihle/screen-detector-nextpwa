@@ -14,7 +14,7 @@ const ScreenSizeLayout = ({ children }) => {
 
         if (width < 420){setScreen('Mobile')}
         else if (width > 420 && width < 850 && landscape){setScreen('Land Mobile')}
-        else if (width > 420 && width < 1300 && !landscape){setScreen('Tablet')}
+        else if (width > 420 && width < 1200){setScreen('Tablet')}
         else if (width > 820 && width < 1400 && landscape){setScreen('Land Tablet')}
         else {setScreen('Desktop')}
     }

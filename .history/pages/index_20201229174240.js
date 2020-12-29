@@ -1,14 +1,10 @@
-import Nav from '../components/navigation/mobile'
-
 const Index = ({ server, measures, screen }) => {
   
   const width = measures && measures[0] + 'px'
   const heigh = measures && measures[1] + 'px'
-  
 
   return (
-    <div  className='container p-3'>
-      <div className='row' id='content'>
+    <div className='row'>
         <div className="col-md-6 col-lg-3">
           <h2>SSL Detector</h2>
           <h5 style={{color:'red'}}>{screen}</h5>
@@ -24,16 +20,15 @@ const Index = ({ server, measures, screen }) => {
           <h5 style={{color:'red'}}>{width}</h5>
           <hr/>
         </div>
-        <div className="col-sm-1 col-md-6 col-lg-3">
+        <div className="col-md-6 col-lg-3">
           {(measures && measures[0]>240) && (
             <>
               <h2>SCREEN HEIGH SIZE</h2>
-              <h5 style={{color:'red'}}>{`${heigh}`}</h5>
+              <h5 style={{color:'red'}}>{`${heigh}px`}</h5>
               <button className='btn btn-danger mt-2'>BUTTON</button>
             </>
           )}
         </div>
-      </div>
     </div>
   )
 }
